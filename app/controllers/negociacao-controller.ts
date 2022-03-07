@@ -11,7 +11,9 @@ export default class negociacaoController{
   }
 
   adiciona() {
-    console.log(this.inputData)
+    this.inputData.value
+    this.inputQuantidade.value
+    this.inputValor.value
   }
 
 }
