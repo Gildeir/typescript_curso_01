@@ -9,4 +9,10 @@ export default class negociacaoController {
         this.inputQuantidade.value;
         this.inputValor.value;
     }
+    limpaNegociacao() {
+        this.inputData.value = '';
+        this.inputQuantidade.value = '';
+        this.inputValor.value = '';
+        this.inputData.focus();
+    }
 }
