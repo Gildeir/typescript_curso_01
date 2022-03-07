@@ -1,4 +1,4 @@
-export default class {
+export default class Negociacao {
 
   constructor(
     private data: Date, 

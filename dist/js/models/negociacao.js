@@ -1,4 +1,4 @@
-export default class {
+export default class Negociacao {
     constructor(data, quantidade, valor) {
         this.data = data;
         this.quantidade = quantidade;

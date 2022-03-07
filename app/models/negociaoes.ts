@@ -1,11 +1,13 @@
-import negociacaoController from "../controllers/negociacao-controller";
+import Negociacao from "./negociacao";
 
-export default class negociacoes {
+export default class Negociacoes {
 
   private negociacoes: Array<Negociacao> = []
   
-  adiciona() {
-    const negociacao = new negociacaoController()
-    negociacao.adiciona()
+  adiciona(negociacao: Negociacao) {
+    this.negociacoes.push(negociacao)
+  }
+  lista(): readonly Negociacao[] {
+    return this.negociacoes
   }
 }

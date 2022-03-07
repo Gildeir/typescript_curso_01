@@ -1,7 +1,11 @@
-import negociacaoController from "../controllers/negociacao-controller";
-export default class negociacoes {
-    adiciona() {
-        const negociacao = new negociacaoController();
-        negociacao.adiciona();
+export default class Negociacoes {
+    constructor() {
+        this.negociacoes = [];
+    }
+    adiciona(negociacao) {
+        this.negociacoes.push(negociacao);
+    }
+    lista() {
+        return this.negociacoes;
     }
 }
