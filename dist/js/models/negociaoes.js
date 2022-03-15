@@ -1,4 +1,4 @@
-export default class Negociacoes {
+export class Negociacoes {
     constructor() {
         this.negociacoes = [];
     }
@@ -9,3 +9,9 @@ export default class Negociacoes {
         return this.negociacoes;
     }
 }
+const negociacoes = new Negociacoes();
+negociacoes.lista().forEach((n) => {
+    n.data;
+    n.quantidade;
+    n.valor;
+});
