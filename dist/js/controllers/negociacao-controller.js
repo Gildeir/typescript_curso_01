@@ -7,6 +7,7 @@ export class NegociacaoController {
         this.negociacoes = new Negociacoes();
         this.negociacoesView = new NegociacoesView('#negociacoesView');
         this.mensagemView = new MensagemView('#mensagemView');
+        this.MSG = 'Negociacao adicionada com sucesso!';
         this.inputData = document.querySelector('#data');
         this.inputQuantidade = document.querySelector('#quantidade');
         this.inputValor = document.querySelector('#valor');
@@ -16,9 +17,8 @@ export class NegociacaoController {
         const negociacao = this.criaNegociacao();
         this.negociacoes.adiciona(negociacao);
         console.log(this.negociacoes.lista());
-        this.negociacoesView.update(this.negociacoes);
-        this.mensagemView.update('Negociacao Adicionada com sucesso!');
         this.limparFormulario();
+        this.atualizaView();
     }
     criaNegociacao() {
         const exp = /-/g;
@@ -32,5 +32,9 @@ export class NegociacaoController {
         this.inputQuantidade.value = '';
         this.inputValor.value = '';
         this.inputData.focus();
+    }
+    atualizaView() {
+        this.negociacoesView.update(this.negociacoes);
+        this.mensagemView.update(this.MSG);
     }
 }
