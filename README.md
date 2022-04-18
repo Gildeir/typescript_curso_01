@@ -42,12 +42,18 @@ npm install
     
     3 chamar dentro da função "controller.adiciona()"
 
-    ## Crie uma classe Negociacoes
+ ## Crie uma classe Negociacoes
       - Essa classe apenas adicionará uma negociacao nunca apagará
 
-      Obs: o tipo de retorno será será um array do tipo Negociacao ex: "private negociacoes: Array<Negociacao> = []"
+      Obs: criando médoto privage:
+      "private negociacoes: Array<Negociacao> = []"
+
       1 crie um metodo adiciona com push de cada negociacao
+        - o método adiciona recebe como parâmetro (negociacao: Negociacao)
+         Ex: Dentro do método: this.negociacoes.push(negociacao) 
+
       2 crie um metodo lista: Readonly para retornar as negociacoes 
+      
       3 Um forEach pode percorrer a lista para cada data, quantidade, valor
 
       Ex: 
@@ -58,6 +64,4 @@ npm install
         n.valor
       });
 
-          ## Refatorando a classe utilizando recurso do typescript
-
-          
+  ## Refatorando a classe utilizando recurso do typescript
